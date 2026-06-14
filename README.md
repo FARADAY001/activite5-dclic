@@ -1,4 +1,4 @@
-# Magazine Infos — Gestion des Rédacteurs
+# Magazine Infos - Gestion des Rédacteurs
 
 Application Flutter Android de gestion des rédacteurs d'un magazine numérique, connectée à Firebase Firestore en temps réel.
 
@@ -109,5 +109,5 @@ Collection : redacteurs
 
 ## Auteur
 
-Projet réalisé dans le cadre du cours **Développement Mobile — Niveau Approfondi**  
-Activité n°3 — Flutter + Firebase Firestore + Architecture MVC
+Projet réalisé dans le cadre du cours **Développement Mobile - Niveau Approfondi**  
+Activité n°3 - Flutter + Firebase Firestore + Architecture MVC
