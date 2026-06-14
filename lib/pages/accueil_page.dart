@@ -9,15 +9,29 @@ class AccueilPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
+    return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image(image: AssetImage('assets/images/magazineInfo.jpg')),
-          PartieTitre(),
-          PartieTexte(),
-          PartieIcone(),
-          PartieRubrique(),
+          Image.asset(
+            'assets/images/magazineInfo.jpg',
+            width: double.infinity,
+            height: 220,
+            fit: BoxFit.cover,
+            errorBuilder: (ctx, e, _) => Container(
+              width: double.infinity,
+              height: 220,
+              color: Colors.pink.shade100,
+              child: Icon(Icons.image_not_supported,
+                  size: 60, color: Colors.pink.shade300),
+            ),
+          ),
+          const PartieTitre(),
+          const PartieTexte(),
+          const SizedBox(height: 8),
+          const PartieIcone(),
+          const PartieRubrique(),
+          const SizedBox(height: 20),
         ],
       ),
     );

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "167432361384",
+    "project_id": "activitefirebase-45bfc",
+    "storage_bucket": "activitefirebase-45bfc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167432361384:android:1047d98b6a286ba6cb399d",
+        "android_client_info": {
+          "package_name": "com.example.activite5plus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxmxDZ2qrkResektJEGtTCP5RI1cyVfwc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

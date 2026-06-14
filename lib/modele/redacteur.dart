@@ -1,31 +1,22 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class Redacteur {
-  int? id;
-  String nom;
-  String prenom;
-  String email;
+  final String id;
+  final String nom;
+  final String specialite;
 
-  Redacteur({
-    this.id,
-    required this.nom,
-    required this.prenom,
-    required this.email,
-  });
+  Redacteur({required this.id, required this.nom, required this.specialite});
 
-  Map<String, dynamic> toMap() {
-    return {
-      'id': id,
-      'nom': nom,
-      'prenom': prenom,
-      'email': email,
-    };
+  factory Redacteur.fromFirestore(DocumentSnapshot doc) {
+    final data = doc.data() as Map<String, dynamic>;
+    return Redacteur(
+      id: doc.id,
+      nom: data['nom'] ?? '',
+      specialite: data['specialite'] ?? '',
+    );
   }
 
-  factory Redacteur.fromMap(Map<String, dynamic> map) {
-    return Redacteur(
-      id: map['id'],
-      nom: map['nom'],
-      prenom: map['prenom'],
-      email: map['email'],
-    );
+  Map<String, dynamic> toMap() {
+    return {'nom': nom, 'specialite': specialite};
   }
 }

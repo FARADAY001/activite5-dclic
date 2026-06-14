@@ -5,13 +5,13 @@ class PartieTitre extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Padding(
       padding: const EdgeInsets.all(20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "MAGAZINE INFOS",
+            'MAGAZINE INFOS',
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
@@ -21,7 +21,7 @@ class PartieTitre extends StatelessWidget {
           ),
           const SizedBox(height: 6),
           Text(
-            "L’actualité et les tendances numériques",
+            "L'actualité et les tendances numériques",
             style: TextStyle(
               color: Colors.grey.shade600,
               fontSize: 15,

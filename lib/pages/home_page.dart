@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'accueil_page.dart';
-import 'redacteur_page.dart';
+import '../controllers/redacteur_controller.dart';
 import '../widgets/app_drawer.dart';
+import 'accueil_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -11,26 +11,20 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _index = 0;
+  late final RedacteurController _controller;
 
-  final List<Widget> _pages = const [AccueilPage(), RedacteurPage()];
-
-  final List<String> _titres = const ["Accueil", "Gestion des Rédacteurs"];
+  @override
+  void initState() {
+    super.initState();
+    _controller = RedacteurController();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    appBar: AppBar(
-      title: Text(_titres[_index]),
-    ),
-    drawer: AppDrawer(
-      onSelect: (i) {
-        setState(() {
-          _index = i;
-        });
-      },
-    ),
-    body: _pages[_index],
-  );
+      appBar: AppBar(title: const Text('Magazine Infos')),
+      drawer: AppDrawer(controller: _controller),
+      body: const AccueilPage(),
+    );
   }
 }
